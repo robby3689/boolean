@@ -9,21 +9,31 @@ import {
   uploadBytes
 } from "firebase/storage";
 
-// ✅ Firebase config (your actual project details)
+// ✅ Correct Firebase Config (with fixed storageBucket)
 const firebaseConfig = {
   apiKey: "AIzaSyCOazS8lRzqXujRnnMk5hypF6dji4QxJ-g",
   authDomain: "codeqube-3bf04.firebaseapp.com",
   projectId: "codeqube-3bf04",
-  storageBucket: "codeqube-3bf04.appspot.com", // ✅ Must end with .appspot.com
+  storageBucket: "codeqube-3bf04.appspot.com", // ✅ fixed
   messagingSenderId: "1049939926485",
-  appId: "1:1049939926485:web:02ef8bb0ffd39f79e5b15c",
-  measurementId: "G-4WZ75G5L1L"
+  appId: "1:1049939926485:web:376a2455e59b5a0de5b15c",
+  measurementId: "G-8DT1VYM2X3"
 };
 
-// ✅ Initialize Firebase app and services
+// ✅ Initialize Firebase App
 const app = initializeApp(firebaseConfig);
+
+// ✅ Initialize Services *after* app is created
 const auth = getAuth(app);
 const storage = getStorage(app);
 
-// ✅ Export only needed SDK functions
-export { app, auth, storage, ref, listAll, getDownloadURL, uploadBytes };
+// ✅ Export only after initialization
+export {
+  app,
+  auth,
+  storage,
+  ref,
+  listAll,
+  getDownloadURL,
+  uploadBytes
+};

@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>NextBoolean</div>
+      <div style={styles.logo}>
+        <Link to="/" style={styles.logoText}>NextBoolean</Link>
+      </div>
       <div style={styles.links}>
         <Link to="/" style={styles.link}>Home</Link>
         <Link to="/courses" style={styles.link}>Courses</Link>
         <Link to="/contact" style={styles.link}>Contact</Link>
         <Link to="/careers" style={styles.link}>Careers</Link>
         <Link to="/login" style={styles.link}>Login</Link>
-        <Link to="/dashboard" style={styles.link}>Dashboard</Link>
+        <Link to="/admin-login" style={{ ...styles.link, color: "#ff3333", fontWeight: "bold" }}>Admin</Link>
       </div>
     </nav>
   );
@@ -19,19 +21,19 @@ export default function Navbar() {
 
 const styles = {
   nav: {
+    backgroundColor: "#00aaff",
+    padding: "1rem 2rem",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "1rem 2rem",
-    backgroundColor: "#0ea5e9",
-    color: "white",
-    position: "sticky",
-    top: 0,
-    zIndex: 999,
   },
   logo: {
     fontWeight: "bold",
     fontSize: "1.5rem",
+  },
+  logoText: {
+    color: "white",
+    textDecoration: "none",
   },
   links: {
     display: "flex",
