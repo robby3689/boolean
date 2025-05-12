@@ -1,0 +1,34 @@
+.courses-container {
+  padding: 3rem;
+}
+
+.course-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.course-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  width: 260px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
