@@ -1,0 +1,38 @@
+
+.courses-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.courses-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.course-card h3 {
+  margin: 15px 0 10px;
+}
+
+.course-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+}

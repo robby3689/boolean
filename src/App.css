@@ -1,0 +1,86 @@
+/* Clean full-page layout like Apple */
+.page {
+  padding: 80px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
+}
+
+/* Replacing cookieCard: use this for login-container, register box, etc. */
+.login-container, .register-container, .dashboard-box, .course-card {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px 40px;
+  background: linear-gradient(to right, #8968ff, #af98ff);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  color: #fff;
+}
+
+/* Optional decorative circle effect from cookieCard */
+.login-container::before, 
+.register-container::before, 
+.dashboard-box::before, 
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to right, #8e6eff, #d0c3ff);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* Headings and descriptions inside cards */
+.login-container h2,
+.register-container h2,
+.dashboard-box h2,
+.course-card h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.course-card p,
+.login-container p,
+.register-container p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+}
+
+/* Buttons - globally styled */
+button {
+  padding: 12px 24px;
+  background-color: #714aff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #6039f9;
+}
