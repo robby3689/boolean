@@ -61,7 +61,7 @@ export default function AdminPanel() {
 
       {view === "upload" && (
         <div>
-          <h2>Upload Course Files</h2>
+          <h2>Upload Course Files here</h2>
           <input
             type="file"
             onChange={(e) => setFile(e.target.files[0])}
